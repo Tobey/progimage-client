@@ -2,7 +2,7 @@ Prog image client
 ------------------
 
 
-A python client for the [prog image server API]('https://github.com/tobey/progimage-server')
+A python client for the [prog image server API](https://github.com/tobey/progimage-server)
 
 Using `python3.6+`
 
