@@ -4,11 +4,13 @@ Prog image client
 
 A python client for the [prog image server API]('https://github.com/tobey/progimage-server')
 
+Using `python3.6+`
+
 Installation 
 ------------
 
 ```
-pip install https://github.com/Tobey/progimage-client.git@v0.1.1#egg=progimage-client
+pip install git+https://github.com/Tobey/progimage-client.git@0.0.1#egg=progimage-client
 ```
 
 Usage
@@ -30,7 +32,7 @@ progimage = ProgImageClient(
 Use methods to retrieve, upload and transform images
 
 ```python
-from progimage_client import tranforms
+from progimage_client import transforms
 
 # Retrieving 
 progimage.get_one(<image_id>)
@@ -43,9 +45,9 @@ progimage.upload_many([<path to file>, <path to file>])
 progimage.upload_by_url([<image url>, <image url>])
 
 # Transforming
-progimage.get_many([<image_id>, <image_id>], tranform=tranforms.THUMBNAIL)
-progimage.get_many([<image_id>, <image_id>], tranform=tranforms.INVERT)
-progimage.get_many([<image_id>, <image_id>], tranform=tranforms.ROTATE)
-progimage.get_many([<image_id>, <image_id>], tranform=tranforms.PNG)
-progimage.get_many([<image_id>, <image_id>], tranform=tranforms.JPEG)
+progimage.get_many([<image_id>, <image_id>], transform=transforms.THUMBNAIL)
+progimage.get_many([<image_id>, <image_id>], transform=transforms.INVERT)
+progimage.get_many([<image_id>, <image_id>], transform=transforms.ROTATE)
+progimage.get_many([<image_id>, <image_id>], transform=transforms.PNG)
+progimage.get_many([<image_id>, <image_id>], transform=transforms.JPEG)
 ```
