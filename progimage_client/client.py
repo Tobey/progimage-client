@@ -86,6 +86,17 @@ class ProgImageClient:
 
         return response
 
+    def upload_by_url(self, image_urls: list):
+        """
+        Saves image to DB and return unique identifier
+
+        :param image_urld:  urls to images
+        :return:
+        """
+
+        response = self.session.post('', json=dict(image_url=image_urls))
+        return response
+
     @staticmethod
     def _valid_path(file_paths: list):
         for file_path in file_paths:

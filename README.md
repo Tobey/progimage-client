@@ -40,6 +40,7 @@ progimage.get_many([<image_id>, <image_id>])
 # Creating
 progimage.upload_one(<path to file>)
 progimage.upload_many([<path to file>, <path to file>])
+progimage.upload_by_url([<image url>, <image url>])
 
 # Transforming
 progimage.get_many([<image_id>, <image_id>], tranform=tranforms.THUMBNAIL)
