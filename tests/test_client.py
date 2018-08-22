@@ -64,7 +64,7 @@ class TestClient(TestCase):
         prog_image_client.upload_one(image_path)
 
         self.assertListEqual(list(request_mock.call_args[0]), ['POST', 'http://localhost:8000/images/'])
-        self.assertEqual(request_mock.call_args[1]['files']['media'].name, image_path)
+        self.assertEqual(request_mock.call_args[1]['files']['image'].name, image_path)
 
     @mock.patch('requests.Session.request')
     def test_upload_many(self, request_mock):

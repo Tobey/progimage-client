@@ -65,7 +65,7 @@ class ProgImageClient:
         self._valid_path([image_path])
         self._valid_ext([image_path])
 
-        files = {'media': open(image_path, 'rb')}
+        files = {'image': open(image_path, 'rb')}
         response = self.session.post('', files=files)
 
         return response
